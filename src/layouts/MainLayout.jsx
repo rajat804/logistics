@@ -9,15 +9,16 @@ const MainLayout = () => {
 
   return (
     <div className="flex flex-col h-screen bg-gray-100">
-      
-      <Topbar 
-        setActiveModule={setActiveModule} 
+
+      <Topbar
+        activeModule={activeModule}
+        setActiveModule={setActiveModule}
         setSidebarOpen={setSidebarOpen}
       />
 
-      <div className="flex flex-1 overflow-hidden relative">
-        
-        <Sidebar 
+      <div className="flex flex-1 overflow-hidden">
+
+        <Sidebar
           activeModule={activeModule}
           sidebarOpen={sidebarOpen}
           setSidebarOpen={setSidebarOpen}
@@ -26,6 +27,7 @@ const MainLayout = () => {
         <div className="flex-1 p-6 overflow-auto">
           <Dashboard />
         </div>
+
       </div>
     </div>
   );
